@@ -1,0 +1,321 @@
+html {
+	position: relative;
+	min-height: 100%;
+	/* border-box box model allows us to add padding and border to our elements without increasing their size */
+	box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+	font-family: 'Roboto', sans-serif;
+
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+body {
+	margin: 0;
+	background: white;
+	font-family: Helvetica;
+	text-decoration: none;
+	overflow-x: hidden;
+	width: 100%;
+    padding: 0px;
+}
+.top {
+	display: grid;
+	height: 63px;
+	grid-template-columns: 1fr 150px 1fr;
+	width: 100%;
+	background-color: #C5C1C0;
+	grid-template-areas: "logo center navbar";
+	font-size: 20px;
+	opacity: 0.8;
+	position: fixed;
+
+}
+
+.navbar {
+	grid-area: navbar;
+	display: grid;
+	grid-gap: 25px;
+	grid-template-columns: repeat(3, 1fr);
+	align-self: center;
+	justify-self: end;
+	text-align: center;
+
+}
+.nav {
+	text-decoration: none;
+	color: #121225;
+
+}
+.nav:hover {
+	color: black;
+	transition: 0.8;
+
+}
+.open-slide {
+	display: grid;
+}
+.open-slide a {
+	align-self: center;
+	margin-left: 6px;
+}
+.logo {
+	grid-area: logo;
+	align-self: center;
+	justify-self: start;
+	margin-left: 6px;
+}
+.side-nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	opacity: 0.9;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+
+}
+.side-nav a {
+	padding: 10px 10px 10px 30px;
+	text-decoration: none;
+	font-size: 22px;
+	color: #ccc;
+	display: block;
+	transition: 0.3s;
+}
+.side-nav a:hover {
+	color: #FFFFFF;
+}
+.side-nav .btn-close {
+	position: absolute;
+	top: 0;
+	right: 22px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+.welcome {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "w1 w2";
+	background-color: black;
+	height: 642px;
+	background: url(images/welcome.jpg);
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.welcomeContainer {
+	color: #E7DFDD;
+	grid-area: w1;
+	align-self: center;
+	justify-self: center;
+	text-align: center;
+	font-size: 1.3rem;
+
+}
+.aboutUs {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "middle2";
+	height: 400px;
+	background-color: #4484CE;
+	background-image: url(https://image.flaticon.com/icons/svg/588/588299.svg);
+
+	background-image: url(images/topography.svg);
+	font-style: normal;
+}
+.aboutUs h1 {
+	font-size: 45px;
+	grid-area: middle2;
+	justify-self: center;
+	align-self: start;
+}
+.aboutUs p {
+	grid-area: middle2;
+	align-self: center;
+	text-align: center;
+	font-size: 24px;
+
+}
+.productsSec {
+	background-color: #C5C1C0;
+	display: grid;
+	grid-template-rows: 200px 1fr;
+	grid-template-areas: "top" "product";
+
+
+}
+.productsSec h1 {
+	color: black;
+	grid-area: top;
+	justify-self: center;
+	align-self: center;
+	font-size: 45px;
+
+}
+.products {
+	display: grid;
+	grid-area: product;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+.item {
+     background: rgba(255, 255, 255, 0.2);
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     display: grid;
+     grid-template-columns: 150px 1fr;
+     grid-gap: 10px;
+     align-items: center;
+     color: black;
+     font-weight: 100;
+
+}
+.productImg {
+	width: 100%;
+}
+.price {
+	font-size: 30px;
+}
+
+footer {
+	display: grid;
+	grid-template-rows: 1fr 150px 50px;
+	grid-template-areas: "contactus" "newsletter" "footer";
+	height: 500px;
+	background-color: #4484CE;
+	background-image: url(images/topography.svg);
+}
+
+footer .contactUs {
+
+	grid-area: contactus;
+	
+}
+footer .contactUs h1 {
+	text-align: center;
+	font-size: 45px;
+}
+footer .contactUs p {
+	text-align: center;
+	font-size: 1.3rem;
+}
+footer .contactUs .socialMedia {
+
+	grid-area: contactus;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "f1 f2 f3";
+}
+
+.socialMedia a {
+	grid-area: f2;	
+	align-self: center;
+	justify-self: center;
+}
+.newsletter {
+	grid-area: newsletter;
+	align-self: center;
+	justify-self: center;
+	text-align: center;
+
+}
+
+
+
+.newsletter input[type="email"]{
+  	padding:4px;
+  	height:25px;
+  	width:250px;
+}
+.button {
+	height:38px;
+ 	background:#C5C1C0;
+ 	border:0;
+ 	padding-left: 20px;
+ 	padding-right:20px;
+ 	color: black;
+ 	font-weight: bold;
+}
+footer .footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "t1 t2 t3";
+	width: 100%;
+	background-color: #05386B;
+
+}
+.footer p {
+	grid-area: t2;
+	align-self: center;
+	justify-self: center;
+	font-size: 16px;
+	margin: 0;
+	font-weight: bold;
+
+}
+
+.toTop {
+	grid-area: t3;
+	justify-self: end;
+	align-self: center;
+	padding-right: 6px;
+}
+/* Media Queries */
+@media(max-width: 769px){
+
+.navbar {
+	display: none;
+}
+.logo {
+	grid-area: center;
+	align-self: center;
+	justify-self: center;
+}
+.welcome {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "wm";
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 500px;
+}
+.welcomeContainer {
+	color: #E7DFDD;
+	grid-area: wm;
+	align-self: center;
+	justify-self: center;
+	font-size: 1rem;
+
+}
+
+.aboutUs p {
+	font-size: 18px;
+}
+
+.newsletter input[type="email"]{
+
+	width: 180px;
+	height: 18px;
+
+
+	}
+}
+
+
+@media (min-width: 769px){
+.open-slide {
+	display: none;
+}
+}
+
+

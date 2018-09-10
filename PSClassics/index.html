@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Mukta|Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <script src="script.js"></script> 
+	<title>PsClassics - Welcome</title>
+</head>
+<body>
+	<nav class="top" id="top">
+		<span class="open-slide">
+			<a href="javascript:void(0);" onclick="openSlideMenu()">
+	       		<svg width="30" height="30">
+	           		<path d="M0,5 30,5" stroke="#000000" stroke-width="5"/>
+	           		<path d="M0,14 30,14" stroke="#000000" stroke-width="5"/>
+	           		<path d="M0,23 30,23" stroke="#000000" stroke-width="5"/>
+	        	</svg>
+			</a>
+		</span>
+		<div class="logo">
+			<a href="#"><img src="images/logo.png" alt="logo"></a>
+		</div>
+		<div class="navbar">
+			<a class="nav" onclick="smoothScroll(document.getElementById('aboutUs'))">About</a>
+			<a class="nav" onclick="smoothScroll(document.getElementById('product'))">Products</a>
+			<a class="nav" onclick="smoothScroll(document.getElementById('contact'))">Contact</a>
+		</div>
+		<div id="side-menu" class="side-nav">
+			<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+			<a onclick="smoothScroll(document.getElementById('aboutUs'))">About</a>
+			<a onclick="smoothScroll(document.getElementById('product'))">Products</a>
+			<a onclick="smoothScroll(document.getElementById('contact'))">Contact</a>
+		</div>
+	</nav>
+	<div class="welcome">
+		<div class="welcomeContainer">
+			<h1> Welcome to PsClassics</h1>
+			<p>the right place for classic PS1 games</p>
+		</div>
+			
+	</div>
+	<section class="aboutUs">
+		<h1 id="aboutUs">About</h1>
+		<p>We are a group of gamers who have a big collection of classic PS1 games and we would love for old gamers to re-live the amazing expierence of those games and for the new gamers to try it. </p>
+			
+	</section>
+	<section class="productsSec">
+		<h1 id="product">Products</h1>
+		<div class="products">
+		<div class="item">
+			<img class="productImg" src="images/crashbandicoot.jpg">
+			<h2>Crash Bandicoot (1996)</h2>
+			<p class="price">40$</p>
+		</div>
+		<div class="item">
+			<img class="productImg" src="images/metalgear.jpg">
+			<h2>Metal Gear Solid (1998)</h2>
+			<p class="price">60$</p>
+		</div>
+		<div class="item">
+			<img class="productImg" src="images/pepsiman.jpg">
+			<h2>Pepsi Man (1999)</h2>
+			<p class="price">80$</p>
+		</div>
+		<div class="item">
+			<img class="productImg" src="images/jackiechan.jpg">
+			<h2>Jackie Chan (2000)</h2>
+			<p class="price">60$</p>
+		</div>
+		<div class="item">
+				<img class="productImg" src="images/tombraider.jpg">
+			<h2>Tomb Raider (1996)</h2>
+			<p class="price">50$</p>
+		</div>
+		<div class="item">
+				<img class="productImg" src="images/silenthill.jpg">
+			<h2>Silent Hill (1999)</h2>
+			<p class="price">60$</p>
+		</div>
+		<div class="item">
+				<img class="productImg" src="images/tekken3.jpg">
+			<h2>Tekken 3 (1997)</h2>
+			<p class="price">50$</p>
+		</div>
+		<div class="item">
+				<img class="productImg" src="images/driver.jpg">
+			<h2>Driver (1999)</h2>
+			<p class="price">70$</p>
+		</div>
+		<div class="item">
+			<img class="productImg" src="images/residentevil.jpg">
+			<h2>Resident Evil (1996)</h2>
+			<p class="price">60$</p>
+		</div>	
+	</div>
+	</section>
+	<footer>
+		<div class="contactUs">
+			<h1 id="contact">Contact</h1>
+			<p>(966) 500 212 555</p>
+			<p>hi@mohdhussein.net</p>
+
+			<div class="socialMedia">
+			<a class="sm1"><img src="images/github.png"></a>
+			</div>
+		</div>
+		<div class="newsletter">
+			<h2>Subscribe to our newsletter!</h2>
+			<input type="email" placeholder="Enter email..">
+			<button type="button" class="button">Subscribe</button>
+		</div>
+		<div class="footer">
+			<p>© 2018</p>
+			<a class="toTop" href="#">
+				
+			<img src="images/top.png">
+
+			</a>
+
+		</div>
+	</footer>
+</body>
+</html>
