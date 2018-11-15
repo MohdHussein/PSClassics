@@ -104,9 +104,10 @@ body {
 	grid-template-rows: 1fr;
 	grid-template-areas: "w1 w2";
 	background-color: black;
-	height: 642px;
+	min-height: 100vh;
+	min-width: 100vw;
 	background: url(images/welcome.jpg);
-	background-position: right;
+	background-position: bottom right;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -125,8 +126,6 @@ body {
 	grid-template-areas: "middle2";
 	height: 400px;
 	background-color: #4484CE;
-	background-image: url(https://image.flaticon.com/icons/svg/588/588299.svg);
-
 	background-image: url(images/topography.svg);
 	font-style: normal;
 }
@@ -141,6 +140,8 @@ body {
 	align-self: center;
 	text-align: center;
 	font-size: 24px;
+	justify-self: center:
+	width: 60%;
 
 }
 .productsSec {
