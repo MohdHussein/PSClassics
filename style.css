@@ -9,7 +9,9 @@ html {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+	scroll-behavior: smooth;
+ 
 }
 body {
 	margin: 0;
@@ -42,6 +44,13 @@ body {
 	justify-self: end;
 	text-align: center;
 
+}
+.navbar a {
+	text-decoration: none;
+	color: black;
+}
+.navbar a:hover {
+	color: #FFFAFA; 
 }
 .nav {
 	text-decoration: none;
@@ -142,12 +151,16 @@ body {
 	font-size: 24px;
 	justify-self: center:
 	width: 60%;
+	margin: auto 20px;
 
+}
+#product, #aboutUs {
+	scroll-margin-top: 5rem;
 }
 .productsSec {
 	background-color: #C5C1C0;
 	display: grid;
-	grid-template-rows: 200px 1fr;
+	grid-template-rows: 100px 1fr;
 	grid-template-areas: "top" "product";
 
 
@@ -237,13 +250,15 @@ footer .contactUs .socialMedia {
   	width:250px;
 }
 .button {
-	height:38px;
+	height:34px;
  	background:#C5C1C0;
  	border:0;
  	padding-left: 20px;
  	padding-right:20px;
  	color: black;
  	font-weight: bold;
+	 
+
 }
 footer .footer {
 	display: grid;
@@ -268,6 +283,9 @@ footer .footer {
 	justify-self: end;
 	align-self: center;
 	padding-right: 6px;
+}
+a:hover {
+	cursor: pointer;
 }
 /* Media Queries */
 @media(max-width: 769px){
@@ -296,6 +314,7 @@ footer .footer {
 	align-self: center;
 	justify-self: center;
 	font-size: 1rem;
+	margin: auto 20px;
 
 }
 
@@ -306,13 +325,18 @@ footer .footer {
 .newsletter input[type="email"]{
 
 	width: 180px;
-	height: 18px;
+	height: 20px;
 
 
 	}
+.button {
+	width: 100px;
+	height: 28px;
+
 }
 
 
+}
 @media (min-width: 769px){
 .open-slide {
 	display: none;
