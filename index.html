@@ -1,109 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="topPage">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Mukta|Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" > 
+	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	 <script src="script.js"></script> 
+	<script src="https://kit.fontawesome.com/7c429ff404.js" crossorigin="anonymous"></script>
+	<script src="script.js"></script> 
 	<title>PsClassics - Welcome</title>
 </head>
 <body>
-	<nav class="top" id="top">
-		<span class="open-slide">
+	<header class="navBar" id="top">
+		<span class="openSlide">
 			<a href="javascript:void(0);" onclick="openSlideMenu()">
-	       		<svg width="30" height="30">
-	           		<path d="M0,5 30,5" stroke="#000000" stroke-width="5"/>
-	           		<path d="M0,14 30,14" stroke="#000000" stroke-width="5"/>
-	           		<path d="M0,23 30,23" stroke="#000000" stroke-width="5"/>
-	        	</svg>
+				<i class="fas fa-bars menuIcon"></i>
 			</a>
 		</span>
 		<div class="logo">
-			<a href="#"><img src="images/logo.png" alt="logo"></a>
+			<a href="#topPage">PSClassics</a>
 		</div>
-		<div class="navbar">
-			<a href="#aboutUs">About</a>
-			<a href="#product">Products</a>
+		<div class="navLinks">
+			<a href="#about">About</a>
+			<a href="#products">Products</a>
 			<a href="#contact">Contact</a>
 		</div>
-		<div id="side-menu" class="side-nav">
-			<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-			<a href="#aboutUs">About</a>
-			<a href="#product">Products</a>
+		<div id="sideMenu" class="sideNav">
+			<a href="javascript:void(0)" class="btnClose" onclick="closeSlideMenu()">&times;</a>
+			<a href="#about">About</a>
+			<a href="#products">Products</a>
 			<a href="#contact">Contact</a>
 		</div>
-	</nav>
-	<div class="welcome">
-		<div class="welcomeContainer">
-			<h1> Welcome to PsClassics</h1>
-			<p>the right place for classic PS1 games and a trip down memory lane.</p>
+	</header>
+	<div class="welcomeSection">
+		<div class="welcomeText">
+				<h1> Welcome to <span>PsClassics</span></h1>
+			<p>the right place for classic PS1 games and a trip down memory lane</p>
 		</div>
-			
 	</div>
-	<section class="aboutUs">
-		<h1 id="aboutUs">About</h1>
-		<p>We are a group of gamers who have a big collection of classic PS1 games and we would love for old gamers to re-live the amazing expierence of those games and for the new gamers to try it. </p>
-			
+	<section class="aboutSection">
+		<h1 id="about">About</h1>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta cumque magnam, possimus esse non ad reiciendis fugit quia laudantium ipsa obcaecati dolorum saepe recusandae architecto, voluptate illum veritatis vitae.Accusantium reiciendis minima, corrupti odio quas quos perspiciatis explicabo dolore aperiam, autem suscipit sunt sit, maxime commodi fuga amet error aspernatur voluptatibus. Ut voluptatem praesentium animi cum nobis nesciunt obcaecati.</p>
 	</section>
-	<section class="productsSec">
-		<h1 id="product">Products</h1>
-		<div class="products">
-		<div class="item">
-			<img class="productImg" src="images/crashbandicoot.jpg">
-			<h2>Crash Bandicoot (1996)</h2>
-			<p class="price">40$</p>
+	<section class="productsSection">
+		<h1 id="products">Products</h1>
+		<div class="gamesList">
+			<div class="item">
+				<img class="gameImg" src="images/crashbandicoot.jpg">
+				<h2 class="gameDescription">Crash Bandicoot (1996)</h2>
+				<p class="price">40$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/metalgear.jpg">
+				<h2 class="gameDescription">Metal Gear Solid (1998)</h2>
+				<p class="price">60$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/pepsiman.jpg">
+				<h2 class="gameDescription">Pepsi Man (1999)</h2>
+				<p class="price">80$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/jackiechan.jpg">
+				<h2 class="gameDescription">Jackie Chan (2000)</h2>
+				<p class="price">60$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/tombraider.jpg">
+				<h2 class="gameDescription">Tomb Raider (1996)</h2>
+				<p class="price">50$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/silenthill.jpg">
+				<h2 class="gameDescription">Silent Hill (1999)</h2>
+				<p class="price">60$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/tekken3.jpg">
+				<h2 class="gameDescription">Tekken 3 (1997)</h2>
+				<p class="price">50$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/driver.jpg">
+				<h2 class="gameDescription">Driver (1999)</h2>
+				<p class="price">70$</p>
+			</div>
+			<div class="item">
+				<img class="gameImg" src="images/residentevil.jpg">
+				<h2 class="gameDescription">Resident Evil (1996)</h2>
+				<p class="price">60$</p>
+			</div>	
 		</div>
-		<div class="item">
-			<img class="productImg" src="images/metalgear.jpg">
-			<h2>Metal Gear Solid (1998)</h2>
-			<p class="price">60$</p>
-		</div>
-		<div class="item">
-			<img class="productImg" src="images/pepsiman.jpg">
-			<h2>Pepsi Man (1999)</h2>
-			<p class="price">80$</p>
-		</div>
-		<div class="item">
-			<img class="productImg" src="images/jackiechan.jpg">
-			<h2>Jackie Chan (2000)</h2>
-			<p class="price">60$</p>
-		</div>
-		<div class="item">
-				<img class="productImg" src="images/tombraider.jpg">
-			<h2>Tomb Raider (1996)</h2>
-			<p class="price">50$</p>
-		</div>
-		<div class="item">
-				<img class="productImg" src="images/silenthill.jpg">
-			<h2>Silent Hill (1999)</h2>
-			<p class="price">60$</p>
-		</div>
-		<div class="item">
-				<img class="productImg" src="images/tekken3.jpg">
-			<h2>Tekken 3 (1997)</h2>
-			<p class="price">50$</p>
-		</div>
-		<div class="item">
-				<img class="productImg" src="images/driver.jpg">
-			<h2>Driver (1999)</h2>
-			<p class="price">70$</p>
-		</div>
-		<div class="item">
-			<img class="productImg" src="images/residentevil.jpg">
-			<h2>Resident Evil (1996)</h2>
-			<p class="price">60$</p>
-		</div>	
-	</div>
 	</section>
 	<footer>
-		<div class="contactUs">
+		<div class="contactSection">
 			<h1 id="contact">Contact</h1>
-			<p>(966) 500 212 555</p>
-			<p>hi@mohdhussein.net</p>
+			<p>(966) 500 212 5555</p>
+			<p>PSClassics@company.com</p>
 
 			<div class="socialMedia">
-			<a class="sm1" href="https://github.com/MohdHussein/psclassics" target="_blank"><img src="images/github.png"></a>
+				<a target="_blank" href="https://github.com/MohdHussein/psclassics">
+					<i class="fab fa-github fa-2x"></i>
+				</a>
+				<a target="_blank" href="https://twitter.com/_MohdHussein">
+					<i class="fab fa-twitter fa-2x"></i>
+				</a>
+				<a target="_blank" href="https://www.facebook.com">
+					<i class="fab fa-facebook fa-2x"></i>
+				</a>				
 			</div>
 		</div>
 		<div class="newsletter">
@@ -111,12 +115,10 @@
 			<input type="email" placeholder="Enter email..">
 			<button type="button" class="button">Subscribe</button>
 		</div>
-		<div class="footer">
+		<div class="subFooter">
 			<p>© 2018</p>
-			<a class="toTop" href="#">
-				
-			<img src="images/top.png">
-
+			<a class="toTop" href="#topPage">
+				<i class="fas fa-arrow-up topArrow"></i>
 			</a>
 
 		</div>

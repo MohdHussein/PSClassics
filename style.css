@@ -1,41 +1,43 @@
 html {
-	position: relative;
-	min-height: 100%;
-	/* border-box box model allows us to add padding and border to our elements without increasing their size */
-	box-sizing: border-box;
-    font-family: 'Mukta', sans-serif;
-	font-family: 'Roboto', sans-serif;
-
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
 	scroll-behavior: smooth;
- 
+
 }
 body {
-	margin: 0;
-	background: white;
-	font-family: Helvetica;
-	text-decoration: none;
-	overflow-x: hidden;
-	width: 100%;
-    padding: 0px;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden; 
 }
-.top {
+
+/* Start of navbar  */
+.navBar {
 	display: grid;
 	height: 63px;
 	grid-template-columns: 1fr 150px 1fr;
 	width: 100%;
-	background-color: #C5C1C0;
 	grid-template-areas: "logo center navbar";
 	font-size: 20px;
-	opacity: 0.8;
-	position: fixed;
-
+	position: absolute;
+	top: 0;
+	transition: all 0.35s ease;
 }
 
-.navbar {
+.navBar .logo {
+	grid-area: logo;
+	align-self: center;
+	justify-self: start;
+	margin-left: 6px;
+}
+.navBar .logo a {
+	color: lavender;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 500;
+}
+.navBar .logo a:hover {
+	color: #4484CE;
+	transition: .8s;
+}
+
+.navLinks {
 	grid-area: navbar;
 	display: grid;
 	grid-gap: 25px;
@@ -43,197 +45,244 @@ body {
 	align-self: center;
 	justify-self: end;
 	text-align: center;
-
 }
-.navbar a {
+.navLinks a {
 	text-decoration: none;
-	color: black;
+	color: lavender;
+	cursor: pointer;
+	font-size: 18px;
 }
-.navbar a:hover {
-	color: #FFFAFA; 
+.navLinks a:hover {
+	color: #4484CE;
+	transition: 0.8s;
 }
-.nav {
-	text-decoration: none;
-	color: #121225;
 
-}
-.nav:hover {
-	color: black;
-	transition: 0.8;
-
-}
-.open-slide {
+/* Start of Slide Menu */
+.openSlide {
 	display: grid;
 }
-.open-slide a {
+
+.openSlide a {
 	align-self: center;
 	margin-left: 6px;
+
 }
-.logo {
-	grid-area: logo;
+.openSlide .menuIcon {
+	color: lavender;
+	font-size: 25px;
+	transition: .8s;
 	align-self: center;
-	justify-self: start;
-	margin-left: 6px;
+	justify-self: center;
 }
-.side-nav {
+.openSlide .menuIcon:hover {
+	color: #4484CE;
+	transition: .8s;
+}
+.sideNav {
 	height: 100%;
 	width: 0;
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #111;
-	opacity: 0.9;
+	background-color: black;
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.5s;
+	opacity: .8;
 
 }
-.side-nav a {
+.sideNav a {
 	padding: 10px 10px 10px 30px;
 	text-decoration: none;
 	font-size: 22px;
-	color: #ccc;
+	color: lavender;
 	display: block;
 	transition: 0.3s;
 }
-.side-nav a:hover {
-	color: #FFFFFF;
+.sideNav a:hover {
+	color: #4484CE;
 }
-.side-nav .btn-close {
+.sideNav .btnClose {
 	position: absolute;
 	top: 0;
 	right: 22px;
 	font-size: 36px;
 	margin-left: 50px;
 }
-.welcome {
+
+/* Start of welcome section */
+.welcomeSection {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
-	grid-template-areas: "w1 w2";
 	background-color: black;
 	min-height: 100vh;
 	min-width: 100vw;
-	background: url(images/welcome.jpg);
-	background-position: bottom right;
+	background: url(images/ps1c.jpeg);
+	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
+	top: 0;
 }
-.welcomeContainer {
-	color: #E7DFDD;
-	grid-area: w1;
+.welcomeText {
+	color:lavender;
 	align-self: center;
 	justify-self: center;
 	text-align: center;
-	font-size: 1.3rem;
+}
+.welcomeText span {
+	color: #4484CE;
+}
+.welcomeText h1, .welcomeText p {
+	background-color:rgba(0, 0, 0, .7);
+	justify-self: center;
 
 }
-.aboutUs {
+.welcomeText h1 {
+	margin-top: 0;	
+	display: inline-block;
+	font-size: 45px;
+
+}
+.welcomeText p {
+	margin-top: 0px;
+	font-size: 24px;
+}
+
+/* Start of about section */
+.aboutSection {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas: "middle2";
-	height: 400px;
-	background-color: #4484CE;
-	background-image: url(images/topography.svg);
-	font-style: normal;
+	background-color: #4484ce;
+	height: 450px;
+
 }
-.aboutUs h1 {
+.aboutSection h1 {
 	font-size: 45px;
 	grid-area: middle2;
 	justify-self: center;
+	scroll-margin-top: 63px;
 	align-self: start;
+	
+
 }
-.aboutUs p {
+.aboutSection p {
 	grid-area: middle2;
-	align-self: center;
 	text-align: center;
 	font-size: 24px;
-	justify-self: center:
-	width: 60%;
-	margin: auto 20px;
+	justify-self: center;
+	width: 80%;
+	align-self: center;
 
 }
-#product, #aboutUs {
-	scroll-margin-top: 5rem;
-}
-.productsSec {
-	background-color: #C5C1C0;
+
+/* Start of products section */
+
+.productsSection {
+	background-color: lavender;
 	display: grid;
-	grid-template-rows: 100px 1fr;
+	grid-template-rows: 150px 1fr;
 	grid-template-areas: "top" "product";
-
-
 }
-.productsSec h1 {
+.productsSection h1 {
 	color: black;
 	grid-area: top;
 	justify-self: center;
-	align-self: center;
+	align-self: start;
 	font-size: 45px;
-
+	scroll-margin-top: 63px;
 }
-.products {
+.productsSection .gamesList {
 	display: grid;
 	grid-area: product;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: 250px 250px 250px;
+	justify-content: center;
+	margin-bottom: 100px;
+	grid-gap: 30px;
+
 
 }
-.item {
-     background: rgba(255, 255, 255, 0.2);
+.gamesList .item {
+     background:rgba(255, 255, 255, 0.2);
      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-     padding: 20px;
      display: grid;
-     grid-template-columns: 150px 1fr;
-     grid-gap: 10px;
-     align-items: center;
+     grid-template-rows: 1fr 60px 40px;
+	 align-content: center;
+	 justify-content: center;
+	 align-items: center;
      color: black;
-     font-weight: 100;
-
+	 font-weight: 100;
+	 
+	 
 }
-.productImg {
+.gamesList .item .gameImg {
+	height: 250px;
+	width: 250px;
+	border: 1px solid #111;
+	
+}
+.gamesList .item .gameDescription {
 	width: 100%;
+	font-size: 1.3rem;
+	text-align: center;
 }
-.price {
-	font-size: 30px;
+.gamesList .item .price {
+	font-size: 1.5rem;
+	font-weight: normal;
+	text-align: center;
+
 }
 
+/* Start of footer */ 
 footer {
 	display: grid;
 	grid-template-rows: 1fr 150px 50px;
 	grid-template-areas: "contactus" "newsletter" "footer";
 	height: 500px;
 	background-color: #4484CE;
-	background-image: url(images/topography.svg);
 }
 
-footer .contactUs {
+/* Start of contact section */ 
+
+footer .contactSection {
 
 	grid-area: contactus;
 	
 }
-footer .contactUs h1 {
+footer .contactSection h1 {
 	text-align: center;
 	font-size: 45px;
 }
-footer .contactUs p {
+footer .contactSection p {
 	text-align: center;
-	font-size: 1.3rem;
+	font-size: 24px;
 }
-footer .contactUs .socialMedia {
+
+/* Start of socialmedia icons */
+
+footer .contactSection .socialMedia {
 
 	grid-area: contactus;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas: "f1 f2 f3";
+	width: 100%;
+	justify-items: center;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 30px 30px 30px;
+	grid-gap: 30px;
+
+}
+.socialMedia a {
+	color: black;
+}
+.socialMedia a:hover {
+	color: lavender;
+	transition: .8s;
 }
 
-.socialMedia a {
-	grid-area: f2;	
-	align-self: center;
-	justify-self: center;
-}
+/* Start of newsletter */
 .newsletter {
 	grid-area: newsletter;
 	align-self: center;
@@ -241,26 +290,22 @@ footer .contactUs .socialMedia {
 	text-align: center;
 
 }
-
-
-
 .newsletter input[type="email"]{
-  	padding:4px;
-  	height:25px;
-  	width:250px;
+	height:32px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	border: 0;
 }
 .button {
 	height:34px;
- 	background:#C5C1C0;
- 	border:0;
- 	padding-left: 20px;
- 	padding-right:20px;
- 	color: black;
- 	font-weight: bold;
-	 
+	background-color:lavender;
+	font-weight: bold;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	border: 0;
 
 }
-footer .footer {
+
+/* Start of subfooter */
+footer .subFooter {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: "t1 t2 t3";
@@ -268,13 +313,14 @@ footer .footer {
 	background-color: #05386B;
 
 }
-.footer p {
+.subFooter p {
 	grid-area: t2;
 	align-self: center;
 	justify-self: center;
 	font-size: 16px;
 	margin: 0;
 	font-weight: bold;
+	color: lavender;
 
 }
 
@@ -283,64 +329,106 @@ footer .footer {
 	justify-self: end;
 	align-self: center;
 	padding-right: 6px;
+	opacity: 0.8;
+
 }
-a:hover {
-	cursor: pointer;
+.toTop .topArrow {
+	opacity: 0.7;
+	color: lavender;
+	font-size: 28px;
+}
+.toTop .topArrow:hover {
+	opacity: 1.0;
+	color: white;
+}
+
+
+/* Media Queries */
+@media (min-width: 769px){
+	.openSlide {
+		display: none;
+	}
+	}
+	
+
+/* Media Queries */
+@media(max-width: 837px){
+
+	.productsSection .gamesList {
+	
+			grid-template-columns: 250px 250px;
+		}		
 }
 /* Media Queries */
 @media(max-width: 769px){
 
-.navbar {
-	display: none;
-}
-.logo {
-	grid-area: center;
-	align-self: center;
-	justify-self: center;
-}
-.welcome {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas: "wm";
-	background-position: right;
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 500px;
-}
-.welcomeContainer {
-	color: #E7DFDD;
-	grid-area: wm;
-	align-self: center;
-	justify-self: center;
-	font-size: 1rem;
-	margin: auto 20px;
+/* font sizes of h1 and p tags */
+	.welcomeSection h1, .aboutSection h1, .productsSection h1, footer .contactSection h1 {
+		font-size: 35px;
+	}
+	.welcomeSection p, .aboutSection p, .productsSection p, footer .contactSection p {
+		font-size: 18px;
+	}
 
-}
+/* Start of Navbar */
 
-.aboutUs p {
-	font-size: 18px;
-}
+	.navBar .logo {
+		grid-area: center;
+		align-self: center;
+		justify-self: center;
+	}
+	.navLinks {
+		display: none;
+	}
 
-.newsletter input[type="email"]{
 
-	width: 180px;
-	height: 20px;
+/* Start of welcomes ection */
 
+	.welcomeSection {
+		
+		grid-template-areas: "wm";
+	
+	}
+	.welcomeText {
+		grid-area: wm;
+		align-self: center;
+		justify-self: center;
+	
+	}
+	
+	/* Start of about section */
+
+	.aboutSection p {
+		font-size: 18px;
+	}
 
 	}
-.button {
-	width: 100px;
-	height: 28px;
+	
+	
+/* Media Queries */
+@media(max-width: 565px){
 
-}
+	.welcomeSection h1, .aboutSection h1, .productsSection h1, footer .contactSection h1 {
+		font-size: 30px;
+	}
 
+	.welcomeSection p, .aboutSection p, .productsSection p, footer .contactSection p {
+		font-size: 16px;
+	}	
+	.productsSection .gamesList{
+			grid-template-columns: 250px;
+		}	
+	}
+	
+/* Media Queries */
+@media(max-width: 350px){
 
-}
-@media (min-width: 769px){
-.open-slide {
-	display: none;
-}
-}
+	.welcomeSection h1, .aboutSection h1, .productsSection h1, footer .contactSection h1 {
+		font-size: 25px;
+	}
 
+	.newsletter h2{
+		font-size: 22px;
+	}
+	}
 
